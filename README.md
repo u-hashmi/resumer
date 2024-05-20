@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Resumer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Resumer is a web application designed to help users create and manage their resumes. It offers a user-friendly interface for inputting personal information, skills, work experience, education, and projects, and generates a formatted resume that can be exported to PDF.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Personal Information Management**: Input and update your contact details.
+- **Skills**: Add and categorize your skills.
+- **Work Experience**: Document your job history with detailed descriptions.
+- **Education**: Record your educational background.
+- **Projects**: Showcase your projects with descriptions and timelines.
+- **PDF Export**: Generate and download your resume as a PDF.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Node.js](https://nodejs.org/) (version 12.x or later)
+- [npm](https://www.npmjs.com/) (version 6.x or later)
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/u-hashmi/resumer.git
+    cd resumer
+    ```
 
-### `npm run build`
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Start the development server:
+    ```bash
+    npm start
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    The application should now be running on `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
 
-### `npm run eject`
+- **/src**: Contains all source code for the application.
+  - **/components**: Reusable React components.
+  - **/pages**: Main pages of the application.
+  - **/styles**: CSS and styled components.
+  - **/utils**: Utility functions and constants.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Main Components
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `PageArea`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The `PageArea` component is responsible for displaying the main content of the resume, including personal information, skills, work experience, education, and projects.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Props
 
-## Learn More
+- `resumeData`: Object containing all the resume information.
+- `visibility`: Object controlling the visibility of different sections.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Example
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```jsx
+<PageArea resumeData={resumeData} visibility={visibility} />
